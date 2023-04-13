@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- ICS2O-Assign-02-PHP-Calculations -->
+<!-- Assign-03-PHP-VertexAxisOfSymmCalculation -->
 <html lang="en-ca">
   <head>
     <!-- Metadata -->
@@ -33,31 +33,34 @@
       <?php echo "<h4>By: Julien Lamoureux</h4>" ?>
       <?php echo "<h4>Course: ICS20 Programming</h4>" ?>
       <br>
-      <!--User Input-->
-      <?php echo "<p>With this calculator, which was coded with PHP, you will be able to solve for the axis of symmetry as well as the y-coordinate of the vertex from a quadratic equation in standard form </p>" ?>
+      <?php echo "<p>With this calculator, which was coded with PHP, you can solve for the axis of symmetry and the y-coordinate of the vertex from a quadratic equation in standard form. </p>" ?>
+      <!--User Input for Standard Quadratic Equation-->
       <?php echo "<h3>Please enter the following:</h3>" ?>
       <form action="./results.php" method="post" target="result">
         <label for="coefficientA">Coefficient A:</label>
-        <input type="number" id="coefficientA" step=".001" placeholder="Enter the first coefficient" name="coefficientA"><br><br>
+        <input type="number" id="coefficientA" step=".01" placeholder="Enter the first coefficient" name="coefficientA"><br><br>
         <label for="coefficientB">Coefficient B:</label>
-        <input type="number" id="coefficientB" step=".001" placeholder="Enter the second coefficient" name="coefficientB"><br><br>
+        <input type="number" id="coefficientB" step=".01" placeholder="Enter the second coefficient" name="coefficientB"><br><br>
         <label for="constantC">Constant C:</label>
-        <input type="number" id="constantC" step=".001" placeholder="Enter the vonstant" name="constantC"><br><br>
+        <input type="number" id="constantC" step=".01" placeholder="Enter the constant" name="constantC"><br><br>
         <input type="submit" value="Enter"><br><br>	
       </form>
       <!--Display results-->
       <center>
       <iframe id="result" name="result">
 <?php
-  echo "The axis of symmetry is"."$axisOfSymm";
+  // display the axis of symmetry 
+  echo "The axis of symmetry is "."$axisOfSymm".".";
 ?>
 <br>
 <?php
-  echo "The y-coordinate of the vertex is "."$coordinateY";
+  // display the y-coordinate of the vertex
+  echo "The y-coordinate of the vertex is "."$coordinateY".".";
 ?>
 <br>
 <?php 
-  echo "Therefore, this would mean that the coordinates of the vertex would be ("."$axisOfSymm".", "."$coordinateY".")"
+  // display the vertex
+  echo "Therefore, this would mean that the coordinates of the vertex would be ("."$axisOfSymm".", "."$coordinateY".")."
 ?>
       </iframe>
       </center>
